@@ -53,15 +53,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void doAsync(View v) {
-        observable.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+        observable
+                .subscribeOn(Schedulers.io())               // 옵저버블의 스레드를 지정
+                .observeOn(AndroidSchedulers.mainThread())  // 옵저버의 스레드를 지정
                 .subscribe(
                 str -> {
                     data.add(str);
                     adapter.notifyDataSetChanged();  // 매번 데이터를 가져올 때 마다 출력하기 위해 설정
                 },
-                error -> Log.e("Error",error.getMessage()),
-                ()  -> {
+                error -> Log.e("Error",error.getMessage()),     // onError
+                ()  -> {                                             // onComplete
                     data.add("complete");
                     adapter.notifyDataSetChanged();
                 }
