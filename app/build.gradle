@@ -37,4 +37,5 @@ dependencies {
 
     // rx binding
     implementation 'com.jakewharton.rxbinding2:rxbinding-appcompat-v7:2.+'
+    implementation 'com.android.support:design:26.0.0-beta1'
 }
