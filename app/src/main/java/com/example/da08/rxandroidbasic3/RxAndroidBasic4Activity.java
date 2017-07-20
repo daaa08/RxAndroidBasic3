@@ -62,7 +62,7 @@ public class RxAndroidBasic4Activity extends AppCompatActivity {
         );
     }
 
-    public void doMap() {
+    public void doMap(View view) {
         observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -79,7 +79,7 @@ public class RxAndroidBasic4Activity extends AppCompatActivity {
 
     }
 
-    public void doFmap() {
+    public void doFmap(View view) {
         observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -95,7 +95,7 @@ public class RxAndroidBasic4Activity extends AppCompatActivity {
 
     }
 
-    public void doZip() {
+    public void doZip(View view) {
         observableZip
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
