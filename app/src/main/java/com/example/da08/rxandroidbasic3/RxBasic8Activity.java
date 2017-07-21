@@ -55,6 +55,8 @@ public class RxBasic8Activity extends AppCompatActivity {
                                 Log.i("Weather", "지역명 :" + row.getSTN_NM());
                                 Log.i("Weather", "온도 :" + row.getSAWS_TA_AVG() + "도");
                                 Log.i("Weather", "습도 :" + row.getSAWS_HD() + "%");
+                                Log.i("Weather", "풍속 :" + row.getSAWS_WS_AVG() + "m/s");
+                                Log.i("Weather", "강수 :" + row.getSAWS_RN_SUM() + "mm");
                             }
                         }
                 );
